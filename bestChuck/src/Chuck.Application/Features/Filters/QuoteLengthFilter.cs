@@ -1,4 +1,5 @@
 using Chuck.Application.Features.Quotes;
+using Chuck.Application.Models;
 using Microsoft.Extensions.Logging;
 
 namespace Chuck.Application.Features.Filters;

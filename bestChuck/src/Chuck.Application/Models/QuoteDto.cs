@@ -1,4 +1,4 @@
-namespace Chuck.Application.Features.Quotes;
+namespace Chuck.Application.Models;
 
 public class QuoteDto
 {

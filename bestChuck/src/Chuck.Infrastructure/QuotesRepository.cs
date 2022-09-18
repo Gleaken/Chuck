@@ -1,5 +1,6 @@
 using Chuck.Application;
 using Chuck.Application.Features.Quotes;
+using Chuck.Application.Models;
 using Chuck.Infrastructure.Extensions;
 using Chuck.Infrastructure.Models;
 using Microsoft.Extensions.Options;

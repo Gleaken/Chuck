@@ -1,3 +1,4 @@
+using Chuck.Application.Models;
 using MediatR;
 
 namespace Chuck.Application.Features.Quotes;

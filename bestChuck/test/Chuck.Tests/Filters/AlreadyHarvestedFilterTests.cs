@@ -1,6 +1,6 @@
 using Chuck.Application;
 using Chuck.Application.Features.Filters;
-using Chuck.Application.Features.Quotes;
+using Chuck.Application.Models;
 using Microsoft.Extensions.Logging;
 
 namespace Chuck.Tests.Filters;

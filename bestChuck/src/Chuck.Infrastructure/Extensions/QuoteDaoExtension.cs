@@ -1,4 +1,5 @@
 using Chuck.Application.Features.Quotes;
+using Chuck.Application.Models;
 using Chuck.Infrastructure.Models;
 
 namespace Chuck.Infrastructure.Extensions;
