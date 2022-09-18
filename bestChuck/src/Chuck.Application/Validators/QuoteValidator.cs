@@ -1,5 +1,4 @@
 using Chuck.Application.Features.Filters;
-using Chuck.Application.Features.Quotes;
 using Chuck.Application.Models;
 
 namespace Chuck.Application.Validators;
