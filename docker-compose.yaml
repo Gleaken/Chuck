@@ -1,0 +1,38 @@
+version: "3.7"
+services:
+
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  mongo-express:
+    image: mongo-express
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+    depends_on:
+      - mongo
+
+  chuck-harvester:
+    build:
+      context: bestChuck/src
+      dockerfile: Chuck.Worker/Dockerfile
+    environment:
+      MongoConfiguration__CollectionName: quotes
+      MongoConfiguration__DatabaseName: chuck
+      MongoConfiguration__ConnectionString: mongodb://root:example@mongo:27017/
+      WorkerConfiguration__Frequency: 00:05:00
+      WorkerConfiguration__QuoteUrl: https://api.chucknorris.io/jokes/random
+      WorkerConfiguration__FetchCount: 10
+    depends_on:
+      - mongo
+
+
+
